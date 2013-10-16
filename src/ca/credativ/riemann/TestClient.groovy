@@ -18,7 +18,7 @@ class TestClient
 {
   public static void main(String []args)
   {
-    RiemannClient riemannClient = RiemannClient.udp("monitor.xtuple.com", 5555);
+    RiemannClient riemannClient = RiemannClient.udp(args[0], 5555);
 
     Sql sql
     def select = """select numbackends as connections, xact_commit as transactions, xact_rollback as rollback,
